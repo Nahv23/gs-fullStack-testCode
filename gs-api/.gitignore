@@ -108,3 +108,4 @@ dist
 
 # Others
 .vscode
+.DS_Store
