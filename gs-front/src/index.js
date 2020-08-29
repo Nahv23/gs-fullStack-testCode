@@ -4,15 +4,30 @@ import ReactDOM from "react-dom";
 import { Router } from "react-router-dom";
 import history from "./history";
 
+import { createStore } from 'redux';
+import { Provider } from "react-redux";
+import reducer from './Redux'
+import { loadState, saveState } from './Redux/LocalStore/index';
+
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
+
+const initialData = loadState();
+const store = createStore(reducer, initialData);
+
+store.subscribe(function() {
+	saveState(store.getState());
+});
+
 ReactDOM.render(
   <React.StrictMode>
-    <Router history={history}>
-      <App />
-    </Router>
+    <Provider store={store}>
+      <Router history={history}>
+        <App />
+      </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

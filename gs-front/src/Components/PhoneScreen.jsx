@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
 import history from '../history';
 
-export const PhoneScreen = () => {
-
+export const PhoneScreen = ({infoPhone}) => {
 
   return (
     <>
@@ -16,4 +16,10 @@ export const PhoneScreen = () => {
   )
 }
 
-export default PhoneScreen;
+const mapStateToProps = (state) => ({
+  infoPhone: state.infoPhone.phone,
+});
+
+const mapDispatchToProps = (dispatch) => ({});
+
+export default connect(mapStateToProps, mapDispatchToProps)(PhoneScreen);

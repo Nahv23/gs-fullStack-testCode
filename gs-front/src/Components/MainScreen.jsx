@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-
+import { connect } from 'react-redux';
+import { getInfoPhoneAction } from '../Actions';
 import { Link } from 'react-router-dom';
 import { PHONE_PATH } from '../constant/Routes';
 
 import PhonesService from '../service/PhoneService';
 
 
-export const MainScreen = () => {
+export const MainScreen = ({ addPhoneInfo }) => {
 
   let [phonesData, setPhonesData] = useState(null);
 
@@ -23,16 +24,32 @@ export const MainScreen = () => {
       console.log(error);
     });
   }, [setPhonesData])
+
+  const selectedPhoneForDetails = (phoneDetails) => {
+    addPhoneInfo(phoneDetails);
+  }
   
   console.log("phonesData ->", phonesData)
   return (
     <>
     <h4> Main Screen </h4>
+
     <Link to={PHONE_PATH.replace(
-      ':phone_id', 1)}> AQUI
+      ':phone_id', 1)}> 
+      <button 
+      onClick={() => selectedPhoneForDetails(phonesData[0])} 
+      className="plus">AQUI</button>
     </Link>
     </>
   )
 }
 
-export default MainScreen;
+const mapStateToProps = (state) => ({});
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addPhoneInfo: (phoneSelected) => getInfoPhoneAction(dispatch)(phoneSelected)
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainScreen);
