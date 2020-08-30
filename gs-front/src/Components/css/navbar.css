@@ -1,0 +1,12 @@
+.link-to-home:hover {
+  color: #17ae8e !important;
+}
+
+@media (min-width: 820px) {
+
+  .form-control {
+    float: right;
+    max-width: 28vw;
+    margin-right: 5px;
+  }
+}

@@ -7,20 +7,10 @@
   margin-left: -50px
 }
 
-.link-to-home:hover {
-  color: #17ae8e !important;
-}
-
 .cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-@media (min-width: 820px) {
 
-  .form-control {
-    max-width: 28vw;
-    margin-right: 5px;
-  }
-}
