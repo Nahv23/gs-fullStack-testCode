@@ -1,3 +1,12 @@
+.spinner-container{
+  position: fixed;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px
+}
+
 .link-to-home:hover {
   color: #17ae8e !important;
 }
@@ -9,13 +18,6 @@
 }
 
 @media (min-width: 820px) {
-  .cards-container{
-      display: grid;
-      justify-content: center;
-      row-gap: 18px;
-      column-gap: 18px;
-      grid-template-columns: repeat(3,260px);
-  }
 
   .form-control {
     max-width: 28vw;

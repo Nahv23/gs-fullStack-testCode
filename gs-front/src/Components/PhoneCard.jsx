@@ -16,7 +16,7 @@ export const PhoneCard = ({ addPhoneInfo, phone }) => {
   }
 
   return (
-    <Card style={{ width: '13rem' }} className='card-content mt-4 mx-3'>
+    <Card className='card-content mt-4 mx-3'>
       <div className="img-container">
         <Card.Img variant="top" src={`${process.env.PUBLIC_URL}/images/${phone.imageFileName}`} alt={phone.imageFileName} className='image mt-1' />
         <Link className="link-more-info" to={PHONE_PATH.replace(
