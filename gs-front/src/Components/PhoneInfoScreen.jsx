@@ -6,7 +6,7 @@ import Navbar from './Navbar.jsx';
 
 import './css/phoneInfoScreen.css'
 
-export const PhoneScreen = ({ infoPhone }) => {
+export const PhoneInfoScreen = ({ infoPhone }) => {
 
   return (
     <>
@@ -14,12 +14,16 @@ export const PhoneScreen = ({ infoPhone }) => {
         needsLinkHome={true}
         needsSearch={false}>
       </Navbar>
-      <div className="col-1 back-button">
-        <button type="button" cy-test={'back-button'} onClick={() => history.goBack()}><i
-          id={'back-button'} className="fas fa-arrow-left mr-1" />
+      <div className="col-2 back-button mt-3 ">
+        <button type="button" onClick={() => history.goBack()} className="btn-outline btn-outline-small default"><i
+          id={'back-button'} className="fas fa-arrow-left mt-1" /> 
+          <span> Back</span>
         </button>
       </div>
-      <h4> Phone Screen </h4>
+      <div>
+        <h4> Phone Screen </h4>
+
+      </div>
     </>
   )
 }
@@ -30,4 +34,4 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({});
 
-export default connect(mapStateToProps, mapDispatchToProps)(PhoneScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(PhoneInfoScreen);
