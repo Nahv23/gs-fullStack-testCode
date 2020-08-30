@@ -32,15 +32,15 @@
 }
 .btn-outline.default {
   color: #404040;
-  border-color: #404040;
+  border-color: #17ae8e;
 }
 .btn-outline.default:hover {
   color: #fff;
-  background-color: #404040;
+  background-color: #17ae8e;
 }
 
 .btn-outline.default.btn-outline-small:focus {
-  box-shadow: 0 0 0 0.2rem rgba(64, 64, 64, 0.7);
+  box-shadow: 0 0 0 0.2rem #17ae8e;
 }
 
 .btn-outline.btn-outline-small {
@@ -49,4 +49,47 @@
 }
 .btn-outline.btn-outline-small i, .btn-outline.btn-outline-small span {
   padding: 0.5rem;
+}
+
+.phone-image{
+  max-height: 350px;
+  width: auto;
+}
+
+.container-fluid{
+  font-family: sans-serif;
+}
+
+.container-fluid > .justify-content-md-center{
+  padding-right: 5vw;
+  padding-left: 5vw;
+}
+
+.technical-characteristics-title {
+  font: 400 23px 'Bitter';
+  color: #04a9ee;
+}
+
+.td-title{
+  /* max-width: 10px; */
+}
+
+@media(max-width: 767px){
+  .phone-image{
+    display:block;
+    margin:auto;
+  }
+}
+
+.phone-title{
+	text-align: center;
+	text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+	color: #333;
+	opacity: 0.4;
+	font: 700 50px 'Bitter';
+}
+
+.phone-description{
+  font: 400 23px 'Bitter';
+  color: #17ae8e;
 }
