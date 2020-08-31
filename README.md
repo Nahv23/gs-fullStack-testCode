@@ -43,7 +43,7 @@ Then, in another terminal window run the Front Web App, following this steps:
    npm install
   ```
   
- &nbsp;&nbsp;_7- _Launch the app:_
+ &nbsp;&nbsp;_7- Launch the app:_
   ```
    npm start
   ```
