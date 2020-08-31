@@ -8,41 +8,50 @@ Copy this folder gs-api to your computer.
 
 ### Installation 🔧
 
-To run this REST API in localhost follow these steps in a terminal window:
+To run the REST API in localhost follow this steps in a terminal window:
 
-  ```
-  Enter the gs-api directory
+ &nbsp;&nbsp;_1- Enter the gs-api directory inside the gs-fullstack-testCode one:_
   ```
    cd gs-api
+  ```
 
+ &nbsp;&nbsp;_2- Install the dependencies:_
   ```
-  Install the dependencies
+   npm install
   ```
-   _npm install_
 
+ &nbsp;&nbsp;_3- Launch the REST API:_
   ```
-  Launch the REST API
+   npm start
   ```
-   _npm start_
 
-  ```
-  Now you can call the endpoint from http://localhost:3001/phones
+ &nbsp;&nbsp;_4- Now you can call the endpoint from http://localhost:3001/phones_
   ```
    Type http://localhost:3001/ it in the browser to check it.
- 
+  ```
 
-### Docker 📦
+
+## Docker 📦
 
 First, check if the Docker image exists. If it does not exist run this command to create the Docker image:
 
-_docker build -t gs-app-back ._
+  &nbsp;&nbsp;_Enter the gs-api directory inside the gs-fullstack-testCode one:_
+  ```
+   cd gs-api
+  ```
+  
+  &nbsp;&nbsp;_Run the following command:_
+  ```
+   docker build -t gs-app-back .
+  ```
 
+  &nbsp;&nbsp;_To run the Docker image:_
+  ```
+    docker run --rm -p 8080:3001 gs-app-back
+  ```
 
-To run the Docker image
+  &nbsp;&nbsp;__Note__: the   ```--rm_ ``` option removed the container when it stops.
 
-_docker run --rm -p 8080:3001 gs-app-back_
-
-Note: the _--rm_ option removed the container when it stops.
 
 Now you can call the endpoint from http://localhost:3001/phones
 
