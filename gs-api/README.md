@@ -50,7 +50,7 @@ First, check if the Docker image exists. If it does not exist run this command t
     docker run --rm -p 8080:3001 gs-app-back
   ```
 
-  &nbsp;&nbsp;__Note__: the   ```--rm_ ``` option removed the container when it stops.
+  &nbsp;&nbsp;__Note__: the ```--rm``` option delete the container after it stops running.
 
 
 Now you can call the endpoint from http://localhost:3001/phones
