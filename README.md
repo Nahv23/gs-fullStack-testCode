@@ -10,83 +10,83 @@ Copy this folder gs-fullstack-testCode to your computer.
 
 To run the REST API in localhost follow this steps in a terminal window:
 
-  ```
-  Enter the gs-api directory inside the gs-fullstack-testCode one
+ 1- _Enter the gs-api directory inside the gs-fullstack-testCode one:_
   ```
    cd gs-api
+  ```
 
+ 2- _Install the dependencies:_
   ```
-  Install the dependencies
+   npm install
   ```
-   _npm install_
 
+ 3- _Launch the REST API:_
   ```
-  Launch the REST API
+   npm start
   ```
-   _npm start_
 
-  ```
-  Now you can call the endpoint from http://localhost:3001/phones
+ 4- _Now you can call the endpoint from http://localhost:3001/phones_
   ```
    Type http://localhost:3001/ it in the browser to check it.
+  ```
+
 
 Then, in another terminal window run the Front Web App, following this steps:
 
-  ```
-  Enter the gs-front directory inside the gs-fullstack-testCode one
+ 5- _Enter the gs-front directory inside the gs-fullstack-testCode one:_
   ```
    cd gs-front
+  ```
 
+ 6- _Install the dependencies:_
   ```
-  Install the dependencies
+   npm install
   ```
-   _npm install_
+  
+ 7- _Launch the app:_
+  ```
+   npm start
+  ```
+  
+ 8- _Now you can open the app in the browser with http://localhost:3000 :_
+  ```
+   Type http://localhost:3000 in the web browser
+  ```
 
-  ```
-  Launch the app
-  ```
-   _npm start_
-
-  ```
-  Now you can open the app in the browser with http://localhost:3000
-  ```
-   Type http://localhost:3000
- 
-
-### Docker 📦
+## Docker 📦
 
 First, check if both Docker images exist. If they do not exist follow these steps to create the Docker images for each part and run both with the Docker Compose to run them at the same time:
 
 For the REST API:
 
+  _Enter the gs-api directory inside the gs-fullstack-testCode one:_
   ```
-  Enter the gs-api directory inside the gs-fullstack-testCode one
+   cd gs-api
   ```
-   _cd gs-api_
-
+  
+  _Run the following command:_
   ```
-  Run the following command
+   docker build -t gs-app-back .
   ```
-  _docker build -t gs-app-back ._
-
+  
 For the Front Web App, the same:
 
+  _Enter the gs-front directory inside the gs-fullstack-testCode one:_
   ```
-  Enter the gs-front directory inside the gs-fullstack-testCode one
+   cd gs-front
   ```
-   _cd gs-front_
-
+  
+  _And run the following command:_
   ```
-  And run the following command
+  docker build -t gs-app-front .
   ```
-  _docker build -t gs-app-front ._
+  
+After created both images just write the command to launch the Docker Compose:
+  ```
+    docker-compose up
+  ```
 
-After created both images just write the command to launch the Docker Compose
-
-  _docker-compose up_
-
-
-Then you are able to reach both application in each route
+Then you are able to reach both application in each route.
   
   For API http://localhost:3001/ 
 
