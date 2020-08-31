@@ -53,7 +53,7 @@ To run the Docker image
 
   ```docker run --rm -p 3000:3000 gs-app-front  ```
 
-  &nbsp;&nbsp;__Note__: the _--rm_ option removed the container when it stops.
+  &nbsp;&nbsp;__Note__: the _--rm_ option delete the container after it stops running.
 
 Now you can open the app in the browser with http://localhost:3000
  
