@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  frontend:
+    image: gs-app-front
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
+    depends_on:
+      - backend
+  backend:
+    image: gs-app-back
+    ports:
+      - 3001:3001
