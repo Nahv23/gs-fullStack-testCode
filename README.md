@@ -27,7 +27,7 @@ To run the REST API in localhost follow this steps in a terminal window:
 
  &nbsp;&nbsp;_4- Now you can call the endpoint from http://localhost:3001/phones_
   ```
-   Type http://localhost:3001/ it in the browser to check it.
+   Type http://localhost:3001/ in the browser to check it.
   ```
 
 
