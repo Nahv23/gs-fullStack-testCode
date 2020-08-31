@@ -10,22 +10,22 @@ Copy this folder gs-fullstack-testCode to your computer.
 
 To run the REST API in localhost follow this steps in a terminal window:
 
- 1- _Enter the gs-api directory inside the gs-fullstack-testCode one:_
+ &nbsp;&nbsp;_1- Enter the gs-api directory inside the gs-fullstack-testCode one:_
   ```
    cd gs-api
   ```
 
- 2- _Install the dependencies:_
+ &nbsp;&nbsp;_2- Install the dependencies:_
   ```
    npm install
   ```
 
- 3- _Launch the REST API:_
+ &nbsp;&nbsp;_3- Launch the REST API:_
   ```
    npm start
   ```
 
- 4- _Now you can call the endpoint from http://localhost:3001/phones_
+ &nbsp;&nbsp;_4- Now you can call the endpoint from http://localhost:3001/phones_
   ```
    Type http://localhost:3001/ it in the browser to check it.
   ```
@@ -33,22 +33,22 @@ To run the REST API in localhost follow this steps in a terminal window:
 
 Then, in another terminal window run the Front Web App, following this steps:
 
- 5- _Enter the gs-front directory inside the gs-fullstack-testCode one:_
+ &nbsp;&nbsp;_5- Enter the gs-front directory inside the gs-fullstack-testCode one:_
   ```
    cd gs-front
   ```
 
- 6- _Install the dependencies:_
+ &nbsp;&nbsp;_6- Install the dependencies:_
   ```
    npm install
   ```
   
- 7- _Launch the app:_
+ &nbsp;&nbsp;_7- _Launch the app:_
   ```
    npm start
   ```
   
- 8- _Now you can open the app in the browser with http://localhost:3000 :_
+ &nbsp;&nbsp;_8- Now you can open the app in the browser with http://localhost:3000 :_
   ```
    Type http://localhost:3000 in the web browser
   ```
@@ -59,24 +59,24 @@ First, check if both Docker images exist. If they do not exist follow these step
 
 For the REST API:
 
-  _Enter the gs-api directory inside the gs-fullstack-testCode one:_
+  &nbsp;&nbsp;_Enter the gs-api directory inside the gs-fullstack-testCode one:_
   ```
    cd gs-api
   ```
   
-  _Run the following command:_
+  &nbsp;&nbsp;_Run the following command:_
   ```
    docker build -t gs-app-back .
   ```
   
 For the Front Web App, the same:
 
-  _Enter the gs-front directory inside the gs-fullstack-testCode one:_
+  &nbsp;&nbsp;_Enter the gs-front directory inside the gs-fullstack-testCode one:_
   ```
    cd gs-front
   ```
   
-  _And run the following command:_
+  &nbsp;&nbsp;_And run the following command:_
   ```
   docker build -t gs-app-front .
   ```
