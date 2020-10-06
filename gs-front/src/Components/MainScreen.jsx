@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 import PhonesService from '../service/PhoneService';
 
+import {PUBLIC_URL} from '../constant/Routes';
+
 import PhoneCard from './PhoneCard.jsx'
 import Navbar from './Navbar.jsx';
 
@@ -41,7 +43,7 @@ export const MainScreen = () => {
       }
     }
     if (valueToSearch && phonesMatchedWithSearch.length === 0){
-      setPhonesDataSearched('No matches');
+      setPhonesDataSearched(false);
     } else{
       setPhonesDataSearched(phonesMatchedWithSearch);
     }
@@ -56,16 +58,16 @@ export const MainScreen = () => {
             needsSearch={true}>
         </Navbar>
         <div className='cards-container mb-3'>
-          { phonesSearched && phonesSearched !== 'No matches' && phonesSearched.length > 0 ?
+          { phonesSearched && phonesSearched.length > 0 ?
             phonesSearched.map((phone, idx) => {
               return (
                 <PhoneCard phone={phone} key={idx} />
               )
             })
             : 
-            phonesSearched === 'No matches' ?
-              <Card className="no-results text-center mt-5" border="light">
-                <Card.Img variant="center" src={`${process.env.PUBLIC_URL}/no-result-found.png`} />
+            phonesSearched === false ?
+              <Card className='no-results text-center mt-5' border='light'>
+                <Card.Img variant='center' src={`${PUBLIC_URL}/no-result-found.png`} />
                 <Card.Body>
                   <Card.Title>No Result Found</Card.Title>
                 </Card.Body>
@@ -87,8 +89,8 @@ export const MainScreen = () => {
             needsLinkHome={false}
             needsSearch={false}>
         </Navbar>
-        <div className="spinner-container">
-          <Spinner type="Bars" color="#00D4BD" height={100} width={100} timeout={5000000} />
+        <div className='spinner-container'>
+          <Spinner type='Bars' color='#00D4BD' height={100} width={100} timeout={5000000} />
         </div>
       </>
     )

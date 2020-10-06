@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getInfoPhoneAction } from '../Actions';
 import { Link } from 'react-router-dom';
-import { PHONE_PATH } from '../constant/Routes';
+import { PUBLIC_URL, PHONE_PATH } from '../constant/Routes';
 
 import Card from 'react-bootstrap/Card';
 
@@ -17,11 +17,11 @@ export const PhoneCard = ({ addPhoneInfo, phone }) => {
 
   return (
     <Card className='card-content mt-4 mx-3'>
-      <div className="img-container">
-        <Card.Img variant="top" src={`${process.env.PUBLIC_URL}/images/${phone.imageFileName}`} alt={phone.imageFileName} className='image mt-1' />
-        <Link className="link-more-info" to={PHONE_PATH.replace(
+      <div className='img-container'>
+        <Card.Img variant='top' src={`${PUBLIC_URL}/images/${phone.imageFileName}`} alt={phone.imageFileName} className='image mt-1' />
+        <Link className='link-more-info' to={PHONE_PATH.replace(
           ':phone_id', phone.name)}>
-          <button className="button-more-info"
+          <button className='button-more-info'
             onClick={() => selectedPhoneForDetails(phone)}
           >More</button>
         </Link>
